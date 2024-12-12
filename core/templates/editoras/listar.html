@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listar Editoras</title>
+</head>
+<body>
+    <h1>Editoras</h1>
+    <a href="{% url 'criar_editora' %}">Adicionar Editora</a>
+    <ul>
+        {% for editora in editoras %}
+        <li>{{ editora.nome }} - 
+            <a href="{% url 'editar_editora' editora.id %}">Editar</a> | 
+            <a href="{% url 'deletar_editora' editora.id %}">Deletar</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

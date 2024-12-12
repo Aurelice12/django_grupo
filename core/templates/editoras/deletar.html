@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deletar Editora</title>
+</head>
+<body>
+    <h1>Tem certeza de que deseja deletar esta editora?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Sim, deletar</button>
+        <a href="{% url 'listar_editoras' %}">Cancelar</a>
+    </form>
+</body>
+</html>
