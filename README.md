@@ -1,2 +1,2 @@
 # django_grupo
-grupo: maria aurelice, lauro, maria lívya, bianca
+integrantes: maria aurelice, lauro, maria lívya, bianca
