@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Autor</title>
+    {% extends 'base.html' %}
+</head>
+<body>
+
+
+{% block title %}Editar Autor{% endblock %}
+
+{% block content %}
+<h1>Editar Autor</h1>
+<form method="post">
+    {% csrf_token %}
+    Nome: <input type="text" name="nome" value="{{ autor.nome }}"><br>
+    Nacionalidade: <input type="text" name="nacionalidade" value="{{ autor.nacionalidade }}"><br>
+    <button type="submit">Salvar</button>
+</form>
+<a href="{% url 'listar_autores' %}">Voltar</a>
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deletar Categoria</title>
+</head>
+<body>
+    <h1>Tem certeza de que deseja deletar esta categoria?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Sim, deletar</button>
+        <a href="{% url 'listar_categorias' %}">Cancelar</a>
+    </form>
+</body>
+</html>
